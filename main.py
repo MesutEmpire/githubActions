@@ -1,6 +1,5 @@
 def sayName():
-  name = 'Mesut Empire
-  print('My name is '+name)
+  print('My name is Mesut Empire')
   
 def shout():
   print('I am shouting loud')
