@@ -7,17 +7,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Login to GitHub Container Registry
-      uses: docker/login-action@v1
-      with:
-        registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.TOKEN }}
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.TOKEN }}
 
-    - name: Build the hello-world Docker image
-      run: |
-        docker build . --tag ghcr.io/MesutEmpire/hello:latest
-        docker run ghcr.io/mesutempire/githubActions:latest
-        docker push ghcr.io/mesutempire/githubActions:latest
+      - name: Build the hello-world Docker image
+        run: |
+          docker build -t ghcr.io/MesutEmpire/githubActions:latest
+          docker run ghcr.io/mesutempire/githubActions:latest
+          docker push ghcr.io/mesutempire/githubActions:latest
