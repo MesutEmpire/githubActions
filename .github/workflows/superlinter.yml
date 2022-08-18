@@ -15,8 +15,3 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{secrets.TOKEN}}
-      
-      # - name: Build the hello-world Docker image
-      #   run: docker login ghcr.io -u MesutEmpire --password-stdin
-      #   env:
-      #     GITHUB_TOKEN: ${{secrets.TOKEN}}
