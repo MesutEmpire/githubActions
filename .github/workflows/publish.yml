@@ -18,6 +18,6 @@ jobs:
 
     - name: Build the hello-world Docker image
       run: |
-        docker build . --tag ghcr.io/MesutEmpire/githubActions:latest
-        docker run ghcr.io/MesutEmpire/githubActions:latest
-        docker push ghcr.io/MesutEmpire/githubActions:latest
+        docker build . --tag ghcr.io/MesutEmpire/hello:latest
+        docker run ghcr.io/mesutempire/githubActions:latest
+        docker push ghcr.io/mesutempire/githubActions:latest
