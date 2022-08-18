@@ -18,6 +18,6 @@ jobs:
 
       - name: Build the hello-world Docker image
         run: |
-          docker build -t ghcr.io/mesutempire/githubactions:latest
-          docker run ghcr.io/mesutempire/githubactions:latest
-          docker push ghcr.io/mesutempire/githubactions:latest
+          docker build . -t  ghcr.io/mesutempire/hello:latest 
+          docker run ghcr.io/mesutempire/hello:latest
+          docker push ghcr.io/mesutempire/hello:latest
